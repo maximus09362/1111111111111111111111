@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Updated to modern dark dashboard theme inspired by Vercel */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 346.8 77.2% 49.8%;
+    --radius: 0.75rem;
+
+    /* Dashboard specific colors */
+    --dashboard-bg: 240 10% 3.9%;
+    --dashboard-card: 240 6% 10%;
+    --dashboard-border: 240 6% 20%;
+    --dashboard-text: 0 0% 98%;
+    --dashboard-muted: 240 5% 64.9%;
+    --dashboard-accent: 217 91% 60%;
+    --dashboard-success: 142 76% 36%;
+    --dashboard-warning: 38 92% 50%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 6% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 6% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 6% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 6% 20%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 6% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 346.8 77.2% 49.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Agregando scroll suave global */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Added dashboard-specific utility classes */
+@layer utilities {
+  .dashboard-bg {
+    background-color: hsl(var(--dashboard-bg));
+  }
+
+  .dashboard-card {
+    background-color: hsl(var(--dashboard-card));
+    border-color: hsl(var(--dashboard-border));
+  }
+
+  .dashboard-text {
+    color: hsl(var(--dashboard-text));
+  }
+
+  .dashboard-muted {
+    color: hsl(var(--dashboard-muted));
+  }
+
+  .dashboard-accent {
+    color: hsl(var(--dashboard-accent));
+  }
+
+  .dashboard-success {
+    color: hsl(var(--dashboard-success));
+  }
+
+  .dashboard-warning {
+    color: hsl(var(--dashboard-warning));
+  }
+}
