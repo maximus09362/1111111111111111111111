@@ -12,7 +12,7 @@ export default function Page() {
     >
       <img
         src="/mantenimiento.png"
-        alt="Mantenimiento"
+        alt="mantenimiento"
         style={{
           maxWidth: "100%",
           maxHeight: "100%",
