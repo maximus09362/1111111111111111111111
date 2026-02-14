@@ -5,8 +5,8 @@ export default function Page() {
         width: "100%",
         height: "100vh",
         display: "flex",
-        alignItems: "center",
         justifyContent: "center",
+        alignItems: "center",
         backgroundColor: "#000",
       }}
     >
