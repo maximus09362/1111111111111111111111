@@ -7,9 +7,18 @@ export default function Page() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "#000",
       }}
     >
-      <h1>Modo mantenimiento activo</h1>
+      <img
+        src="/mantenimiento.png"
+        alt="Mantenimiento"
+        style={{
+          maxWidth: "100%",
+          maxHeight: "100%",
+          objectFit: "contain",
+        }}
+      />
     </main>
   );
 }
