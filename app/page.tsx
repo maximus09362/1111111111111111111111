@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
   // Permitir archivos estáticos (imagen de mantenimiento, etc.)
   if (
     url.pathname.startsWith("/_next") ||
-    url.pathname.startsWith("/mantenimiento.png") ||
+    url.pathname.startsWith("/mantenimiento") ||
     url.pathname.startsWith("/favicon.ico")
   ) {
     return NextResponse.next();
