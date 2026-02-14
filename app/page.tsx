@@ -1,23 +1,19 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import Image from "next/image";
 
-export function middleware(request: NextRequest) {
-  const url = request.nextUrl.clone();
-
-  // Permitir archivos estáticos (imagen de mantenimiento, etc.)
-  if (
-    url.pathname.startsWith("/_next") ||
-    url.pathname.startsWith("/mantenimiento") ||
-    url.pathname.startsWith("/favicon.ico")
-  ) {
-    return NextResponse.next();
-  }
-
-  // Redirigir todo al inicio
-  url.pathname = "/";
-  return NextResponse.rewrite(url);
-}
-
-export const config = {
-  matcher: "/:path*",
-};
+export default function Page() {
+  return (
+    <main
+      style={{
+        width: "100%",
+        height: "100vh",
+        position: "relative",
+        margin: 0,
+        padding: 0,
+      }}
+    >
+      <Image
+        src="/mantenimiento.png"
+        alt="Sitio en mantenimiento"
+        fill
+        style={{ objectFit: "cover" }}
+        pri
