@@ -45,12 +45,28 @@ export default function HomePage() {
       items: "12 delicias",
     },
     {
+      title: "Combos",
+      description: "Las mejores promos para compartir",
+      image: "/images/combos-promo.jpg",
+      href: "/menu/combos",
+      color: "bg-gray-500",
+      items: "6 promos",
+    },
+    {
+      title: "Bebidas",
+      description: "Refrescate con lo mejor",
+      image: "/images/bebidas-logo-new.png",
+      href: "/menu/bebidas",
+      color: "bg-black",
+      items: "8 opciones",
+    },
+    {
       title: "Sra.Hamburguesa",
       description: "Hamburguesas con carácter y sabor real",
       image: "/images/gra-hamburguesa-logo.jpg",
       href: "/menu/burgers",
       color: "bg-red-600",
-      items: "0 variedades",
+      items: "2 variedades",
     },
   ]
 
@@ -83,7 +99,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 max-w-7xl mx-auto">
             {menuCategories.map((category, index) => (
               <Card
                 key={index}

@@ -4,7 +4,7 @@ export const lomoMenu: MenuItem[] = [
   {
     id: "lomo-1",
     name: "SUPERCHARGER",
-    price: 23500,
+    price: 26000,
     image: "/images/supercharger.png",
     category: "lomo",
     popular: true,
@@ -14,7 +14,7 @@ export const lomoMenu: MenuItem[] = [
   {
     id: "lomo-2",
     name: "SR. LOMO",
-    price: 18000,
+    price: 20000,
     image: "/images/sr-lomo.png",
     category: "lomo",
     description:
@@ -23,33 +23,33 @@ export const lomoMenu: MenuItem[] = [
   {
     id: "lomo-3",
     name: "SUPER-DUPER",
-    price: 16500,
+    price: 18500,
     image: "/images/super-duper.png",
     category: "lomo",
     description:
-      "Pan napolitano, carne de ternera, queso, jamón, huevos, tomates, lechuga, mayonesa artesanal saborizada y Con frita.",
+      "Pan napolitano, carne de ternera, queso, jamón, huevos, tomates, lechuga, mayonesa artesanal saborizada y doble porción de fritas.",
   },
   {
     id: "lomo-4",
     name: "PROMO SUPER-DUPER (COMEN 4)",
-    price: 26500,
+    price: 30000,
     image: "/images/super-duper-promo.jpg",
     category: "lomo",
     ingredients: [
-      "Pan napolitano, carne de ternera, queso, jamón, huevos, tomates, lechuga, mayonesa artesanal saborizada y Con frita.",
+      "Pan napolitano, carne de ternera, queso, jamón, huevos, tomates, lechuga, mayonesa artesanal saborizada y doble porción de fritas.",
     ],
   },
   {
     id: "lomo-5",
     name: "MY LUXURY",
-    price: 10500,
+    price: 11000,
     image: "/images/luxury.jpeg",
     category: "lomo",
   },
   {
     id: "lomo-6",
     name: "PORCIÓN DE FRITAS CON ADEREZO",
-    price: 7000,
+    price: 9000,
     image: "/images/papas.jpeg",
     category: "lomo",
   },
@@ -70,13 +70,23 @@ export const lomoMenu: MenuItem[] = [
 ]
 
 export const burgerMenu: MenuItem[] = [
+  
   {
     id: "Proximamente",
-    name: "Proximamente",
-    price: 0,
-    image: "/images/gra-hamburguesa-logo.jpg",
+    name: "HAMBURGUESA COMPLETA",
+    price: 11500,
+    image: "/images/hamburguesa-completa.jpeg",
     category: "burger",
     popular: true,
+    ingredients: ["Proximamente"],
+  },
+
+  {
+    id: "Proximamente",
+    name: "HAMB SUPERCHARGER",
+    price: 16000,
+    image: "/images/hamb-supercharger.jpg",
+    category: "burger",
     ingredients: ["Proximamente"],
   },
 ]
@@ -85,7 +95,7 @@ export const empanadaMenu: MenuItem[] = [
   {
     id: "empanada-1",
     name: "Arabes Docena",
-    price: 15500,
+    price: 18500,
     image: "/images/sra-empanada.png",
     category: "empanada",
     popular: true,
@@ -94,7 +104,7 @@ export const empanadaMenu: MenuItem[] = [
   {
     id: "empanada-2",
     name: "Arabes Media Docena ",
-    price: 9000,
+    price: 10000,
     image: "/images/sra-empanada.png",
     category: "empanada",
     priceLabel: "media docena",
@@ -102,7 +112,7 @@ export const empanadaMenu: MenuItem[] = [
   {
     id: "empanada-3",
     name: "Arabes Unidad",
-    price: 1550,
+    price: 1850,
     image: "/images/sra-empanada.png",
     category: "empanada",
     priceLabel: "por unidad",
@@ -118,7 +128,7 @@ export const empanadaMenu: MenuItem[] = [
   {
     id: "empanada-5",
     name: "JAMÓN Y MOZZARELLA Media Docena",
-    price: 8500,
+    price: 8000,
     image: "/images/jamon-mozzarella-new.png",
     category: "empanada",
     priceLabel: "media docena",
@@ -143,7 +153,7 @@ export const empanadaMenu: MenuItem[] = [
   {
     id: "empanada-8",
     name: "QUESO ROQUEFORT Media Docena",
-    price: 9000,
+    price: 8500,
     image: "/images/queso-roquefort.png",
     category: "empanada",
     priceLabel: "media docena",
@@ -195,35 +205,35 @@ export const pizzaMenu: MenuItem[] = [
   {
     id: "pizza-2",
     name: "FUGAZZA",
-    price: 10500,
+    price: 11500,
     image: "/images/fugazza-especial.png",
     category: "pizza",
   },
   {
     id: "pizza-3",
     name: "FUGAZZETA",
-    price: 13500,
+    price: 14000,
     image: "/images/fugazzeta-final.png",
     category: "pizza",
   },
   {
     id: "pizza-4",
     name: "CALABRESA",
-    price: 13500,
+    price: 14000,
     image: "/images/calabresa-pizza.png",
     category: "pizza",
   },
   {
     id: "pizza-5",
     name: "NAPOLITANA",
-    price: 12500,
+    price: 13000,
     image: "/images/napolitana-pizza.png",
     category: "pizza",
   },
   {
     id: "pizza-6",
     name: "ROQUEFORT",
-    price: 13600,
+    price: 14500,
     image: "/images/roquefort-pizza-new.png",
     category: "pizza",
   },
@@ -237,36 +247,13 @@ export const pizzaMenu: MenuItem[] = [
   {
     id: "pizza-8",
     name: "ESPECIAL CON JAMON NATURAL Y MORRONES",
-    price: 14000,
+    price: 14500,
     image: "/images/morrones-especial.png",
     category: "pizza",
   },
 ]
 
 export const dessertMenu: MenuItem[] = [
-  {
-    id: "dessert-1",
-    name: "Flan Casero",
-    price: 3500,
-    image: "/images/flan-casero.jpg",
-    category: "dessert",
-    popular: true,
-  },
-  {
-    id: "dessert-2",
-    name: "BÚDIN DE PAN CON PASAS DE UVA SIN SEMILLAS",
-    price: 3500,
-    image: "/images/budin-pan-pasas.jpg",
-    category: "dessert",
-    popular: true,
-  },
-  {
-    id: "dessert-3",
-    name: "BÚDIN DE PAN SIN PASAS",
-    price: 3500,
-    image: "/images/budin-pan-sin-pasas.jpg",
-    category: "dessert",
-  },
   {
     id: "dessert-4",
     name: "PALITO BOMBÓN HELADO DE DULCE DE LECHE",
@@ -320,6 +307,114 @@ export const dessertMenu: MenuItem[] = [
     category: "dessert",
     description: "Tacita con frutilla",
   },
+]
+
+export const comboMenu: MenuItem[] = [
+  {
+    id: "combo-1",
+    name: "1 MY LUXURY + 1 BOMBÓN ESCOCÉS O SUIZO",
+    price: 13200,
+    image: "/images/combo-luxury-burger.jpeg",
+    category: "combo",
+    popular: true,
+  },
+  {
+    id: "combo-2",
+    name: "2 MY LUXURY + 2 BOMBÓN ESCOCÉS O SUIZO",
+    price: 26400,
+    image: "/images/combo-luxury-burger.jpeg",
+    category: "combo",
+  },
+  {
+    id: "combo-3",
+    name: "MUZZARELLA + 6 EMPANADAS ARABES ",
+    price: 21500,
+    image: "/images/combo-muzzarella-pizza.jpeg",
+    category: "combo",
+  },
+  {
+    id: "combo-3",
+    name: "1 SUPERCHARGER + 2 BOMBÓN ESCOCÉS O SUIZO ",
+    price: 30400,
+    image: "/images/combo-supercharger.jpeg",
+    category: "combo",
+  },
+  {
+    id: "combo-4",
+    name: "1 MUZZARELLA + 1 ESPECIAL",
+    price: 26500,
+    image: "/images/combo-muzzarella-pizza.jpeg",
+    category: "combo",
+  },
+  {
+    id: "combo-5",
+    name: "1 SR.LOMO + 2 BOMBÓN ESCOCÉS O SUIZO ",
+    price: 24400,
+    image: "/images/combo-sr-lomo.jpeg",
+    category: "combo",
+    popular: true,
+  },
+]
+
+export const bebidaMenu: MenuItem[] = [
+  {
+    id: "bebida-1",
+    name: "COCA-COLA 2.50L",
+    price: 5800,
+    image: "/images/coca-cola-2500ml.png",
+    category: "bebida",
+    popular: true,
+  },
+  {
+    id: "bebida-2",
+    name: "COCA-COLA 1.5L",
+    price: 4600,
+    image: "/images/coca-cola-1500ml.png",
+    category: "bebida",
+  },
+  {
+    id: "bebida-3",
+    name: "FERNET BRANCA 750ML",
+    price: 17000,
+    image: "/images/fernet-branca.png",
+    category: "bebida",
+  },
+  {
+    id: "bebida-4",
+    name: "PRITTY 1.5L",
+    price: 3000,
+    image: "/images/pritty-limon.png",
+    category: "bebida",
+  },
+  {
+    id: "bebida-5",
+    name: "VINO TINTO TORO EN CAJA 1L",
+    price: 3500,
+    image: "/images/vino-toro-tinto.png",
+    category: "bebida",
+  },
+  {
+    id: "bebida-6",
+    name: "COMBO BRANCA",
+    price: 26000,
+    image: "/images/combo-branca.jpeg",
+    category: "bebida",
+  },
+  {
+    id: "bebida-7",
+    name: "COMBO PRITEADO",
+    price: 7500,
+    image: "/images/combo-priteado.jpeg",
+    category: "bebida",
+  },
+  {
+    id: "bebida-8",
+    name: "HIELO",
+    price: 3000,
+    image: "/images/bolsa-hielo.jpeg",
+    category: "bebida",
+  },
+
 ]
 
 export const paymentMethods = [

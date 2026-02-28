@@ -7,7 +7,7 @@ import { X, Plus, Minus, ShoppingBag, Trash2, Edit3 } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { CartQuickActions } from "./cart-quick-actions"
-import { dessertMenu } from "@/lib/menu-data"
+import { dessertMenu, bebidaMenu } from "@/lib/menu-data"
 
 export function CartSidebar() {
   const {
@@ -24,12 +24,14 @@ export function CartSidebar() {
   const [editingNotes, setEditingNotes] = useState<string | null>(null)
   const [tempNotes, setTempNotes] = useState("")
   const [currentDessertIndex, setCurrentDessertIndex] = useState(0)
+  const [currentBebidaIndex, setCurrentBebidaIndex] = useState(0)
+
+  const suggestedItems = [...dessertMenu, ...bebidaMenu]
 
   useEffect(() => {
     if (dessertMenu.length > 2) {
       const interval = setInterval(() => {
         setCurrentDessertIndex((prevIndex) => {
-          // Show 2 desserts at a time, rotate to next pair
           const maxIndex = dessertMenu.length - 2
           return prevIndex >= maxIndex ? 0 : prevIndex + 1
         })
@@ -39,7 +41,21 @@ export function CartSidebar() {
     }
   }, [])
 
+  useEffect(() => {
+    if (bebidaMenu.length > 2) {
+      const interval = setInterval(() => {
+        setCurrentBebidaIndex((prevIndex) => {
+          const maxIndex = bebidaMenu.length - 2
+          return prevIndex >= maxIndex ? 0 : prevIndex + 1
+        })
+      }, 4000)
+
+      return () => clearInterval(interval)
+    }
+  }, [])
+
   const displayedDesserts = dessertMenu.slice(currentDessertIndex, currentDessertIndex + 2)
+  const displayedBebidas = bebidaMenu.slice(currentBebidaIndex, currentBebidaIndex + 2)
 
   const handleEditNotes = (itemId: string, currentNotes?: string) => {
     setEditingNotes(itemId)
@@ -228,6 +244,7 @@ export function CartSidebar() {
                 <div className="border-t pt-4 mt-6">
                   <h4 className="font-medium text-gray-900 mb-3">Te puede interesar</h4>
                   <div className="space-y-2">
+                    <p className="text-xs text-gray-400 font-medium uppercase tracking-wide">Postres</p>
                     {displayedDesserts.map((dessert) => (
                       <div
                         key={dessert.id}
@@ -249,6 +266,34 @@ export function CartSidebar() {
                           variant="outline"
                           className="text-xs bg-transparent hover:bg-green-50 hover:text-green-700 hover:border-green-600"
                           onClick={() => handleAddDessert(dessert)}
+                        >
+                          <Plus className="h-3 w-3 mr-1" />
+                          Agregar
+                        </Button>
+                      </div>
+                    ))}
+                    <p className="text-xs text-gray-400 font-medium uppercase tracking-wide mt-3">Bebidas</p>
+                    {displayedBebidas.map((bebida) => (
+                      <div
+                        key={bebida.id}
+                        className="flex items-center gap-3 p-2 bg-white rounded-lg border hover:bg-gray-50 transition-all"
+                      >
+                        <div className="w-10 h-10 bg-gray-200 rounded overflow-hidden flex-shrink-0">
+                          <img
+                            src={bebida.image || "/placeholder.svg"}
+                            alt={bebida.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-sm font-medium">{bebida.name}</p>
+                          <p className="text-xs text-gray-500">${bebida.price.toLocaleString()}</p>
+                        </div>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="text-xs bg-transparent hover:bg-green-50 hover:text-green-700 hover:border-green-600"
+                          onClick={() => handleAddDessert(bebida)}
                         >
                           <Plus className="h-3 w-3 mr-1" />
                           Agregar
