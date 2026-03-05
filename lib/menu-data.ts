@@ -72,22 +72,23 @@ export const lomoMenu: MenuItem[] = [
 export const burgerMenu: MenuItem[] = [
   
   {
-    id: "Proximamente",
-    name: "HAMBURGUESA COMPLETA",
+    id: "burger-1",
+    name: "SRA.HAMBURGUESA COMPLETA",
     price: 11500,
-    image: "/images/hamburguesa-completa.jpeg",
+    image: "/images/hamb-simple.jpg",
     category: "burger",
     popular: true,
-    ingredients: ["Proximamente"],
+    description: "Pan Tipo Napolitano, un Medallón de carne de 100gr con un Blend exclusivo, Queso Cheddar de Primera calidad, Tomate Fresco en rodajas, Lechuga Fresca, tres aderezos a elección y pan.",
+    sauceOptions: ["Mayonesa Clásica", "Ketchup", "Mostaza"],
   },
-
   {
-    id: "Proximamente",
+    id: "burger-2",
     name: "HAMB SUPERCHARGER",
     price: 16000,
     image: "/images/hamb-supercharger.jpg",
     category: "burger",
-    ingredients: ["Proximamente"],
+    description: "Pan Tipo Napolitano, Dos Medallones de carne de 100gr con un Blend exclusivo, Doble Queso Cheddar de Primera calidad, Tomate Fresco en rodajas, Lechuga Fresca, tres aderezos a elección y pan.",
+    sauceOptions: ["Mayonesa Clásica", "Ketchup", "Mostaza"],
   },
 ]
 

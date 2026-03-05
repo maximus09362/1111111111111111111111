@@ -9,7 +9,7 @@ import { useEffect } from "react"
 
 export default function BurgersPage() {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    window.scrollTo({ top: 2, behavior: "smooth" })
   }, [])
 
   return (
@@ -41,18 +41,18 @@ export default function BurgersPage() {
             </div>
 
             <p className="text-base sm:text-lg max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Medallones caseros de 150g, pan brioche artesanal y ingredientes premium. Cada hamburguesa es una
+              Medallones caseros de 100g, pan tipo napolitano artesanal y ingredientes premium. Cada hamburguesa es una
               experiencia única preparada al momento con la pasión que nos caracteriza desde hace 15 años.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold">0</div>
+                <div className="text-2xl sm:text-3xl font-bold">2</div>
                 <div className="text-sm opacity-80">Variedades</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold">150g</div>
+                <div className="text-2xl sm:text-3xl font-bold">100g</div>
                 <div className="text-sm opacity-80">Medallón casero</div>
               </div>
               <div className="text-center">
@@ -78,13 +78,13 @@ export default function BurgersPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
             <div className="flex flex-col items-center">
               <div className="bg-red-100 p-3 rounded-full mb-3 text-2xl">🔥</div>
-              <h3 className="font-semibold text-gray-800 text-lg">A la Parrilla</h3>
-              <p className="text-sm text-gray-600">Cocción perfecta al carbón</p>
+              <h3 className="font-semibold text-gray-800 text-lg">A la Plancha</h3>
+              <p className="text-sm text-gray-600">Cocción perfecta</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-red-100 p-3 rounded-full mb-3 text-2xl">🏆</div>
               <h3 className="font-semibold text-gray-800 text-lg">Carne Premium</h3>
-              <p className="text-sm text-gray-600">Medallones caseros 150g</p>
+              <p className="text-sm text-gray-600">Medallones caseros 100g</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-red-100 p-3 rounded-full mb-3 text-2xl">⚡</div>

@@ -25,7 +25,13 @@ export default function CheckoutPage() {
 
   const generateWhatsAppMessage = () => {
     const orderSummary = cart
-      .map((item) => `• ${item.quantity}x ${item.name} - $${(item.price * item.quantity).toLocaleString()}`)
+      .map((item) => {
+        let line = `• ${item.quantity}x ${item.name} - $${(item.price * item.quantity).toLocaleString()}`
+        if (item.notes) {
+          line += `\n   ↳ ${item.notes}`
+        }
+        return line
+      })
       .join("\n")
 
     const selectedPaymentMethod = paymentMethods.find((method) => method.id === selectedPayment)

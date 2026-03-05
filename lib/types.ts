@@ -9,6 +9,7 @@ export interface MenuItem {
   ingredients?: string[]
   varieties?: MenuVariety[]
   priceLabel?: string
+  sauceOptions?: string[]
 }
 
 export interface MenuVariety {

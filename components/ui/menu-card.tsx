@@ -17,10 +17,14 @@ export function MenuCard({ item }: MenuCardProps) {
   const { addToCart } = useCart()
   const [isAdding, setIsAdding] = useState(false)
   const [isFavorite, setIsFavorite] = useState(false)
+  const [selectedSauce, setSelectedSauce] = useState<string | null>(
+    item.sauceOptions && item.sauceOptions.length > 0 ? item.sauceOptions[0] : null
+  )
 
   const handleAddToCart = () => {
     setIsAdding(true)
-    addToCart(item)
+    const notes = selectedSauce ? `Aderezo: ${selectedSauce}` : undefined
+    addToCart(item, 1, notes)
 
     // Reset animation after completion
     setTimeout(() => {
@@ -68,7 +72,7 @@ export function MenuCard({ item }: MenuCardProps) {
 
         <CardHeader className="pb-2">
           <CardTitle className="text-lg group-hover:text-red-800 transition-colors">{item.name}</CardTitle>
-          <p className="text-gray-600 text-sm line-clamp-2">{item.description}</p>
+          <p className="text-gray-600 text-sm">{item.description}</p>
         </CardHeader>
 
         <CardContent>
@@ -103,6 +107,28 @@ export function MenuCard({ item }: MenuCardProps) {
                     +{item.ingredients.length - 3} más
                   </Badge>
                 )}
+              </div>
+            </div>
+          )}
+
+          {item.sauceOptions && item.sauceOptions.length > 0 && (
+            <div className="mb-4">
+              <p className="text-xs text-gray-500 mb-2 font-medium">Elegí tu aderezo:</p>
+              <div className="flex flex-wrap gap-2">
+                {item.sauceOptions.map((sauce) => (
+                  <button
+                    key={sauce}
+                    type="button"
+                    onClick={() => setSelectedSauce(sauce)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 ${
+                      selectedSauce === sauce
+                        ? "bg-red-800 text-white border-red-800 shadow-sm"
+                        : "bg-white text-gray-700 border-gray-300 hover:border-red-400 hover:text-red-700"
+                    }`}
+                  >
+                    {sauce}
+                  </button>
+                ))}
               </div>
             </div>
           )}

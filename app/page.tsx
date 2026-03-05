@@ -42,7 +42,7 @@ export default function HomePage() {
       image: "/images/29.jpeg",
       href: "/menu/desserts",
       color: "bg-purple-500",
-      items: "12 delicias",
+      items: "7 delicias",
     },
     {
       title: "Combos",
