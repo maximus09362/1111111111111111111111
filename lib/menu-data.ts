@@ -4,7 +4,7 @@ export const lomoMenu: MenuItem[] = [
   {
     id: "lomo-1",
     name: "SUPERCHARGER",
-    price: 26000,
+    price: 27000,
     image: "/images/supercharger.png",
     category: "lomo",
     popular: true,
@@ -14,7 +14,7 @@ export const lomoMenu: MenuItem[] = [
   {
     id: "lomo-2",
     name: "SR. LOMO",
-    price: 20000,
+    price: 20500,
     image: "/images/sr-lomo.png",
     category: "lomo",
     description:
@@ -23,7 +23,7 @@ export const lomoMenu: MenuItem[] = [
   {
     id: "lomo-3",
     name: "SUPER-DUPER",
-    price: 18500,
+    price: 19500,
     image: "/images/super-duper.png",
     category: "lomo",
     description:
@@ -32,7 +32,7 @@ export const lomoMenu: MenuItem[] = [
   {
     id: "lomo-4",
     name: "PROMO SUPER-DUPER (COMEN 4)",
-    price: 30000,
+    price: 32000,
     image: "/images/super-duper-promo.jpg",
     category: "lomo",
     ingredients: [
@@ -42,28 +42,28 @@ export const lomoMenu: MenuItem[] = [
   {
     id: "lomo-5",
     name: "MY LUXURY",
-    price: 11000,
+    price: 11500,
     image: "/images/luxury.jpeg",
     category: "lomo",
   },
   {
     id: "lomo-6",
     name: "PORCIÓN DE FRITAS CON ADEREZO",
-    price: 9000,
+    price: 10000,
     image: "/images/papas.jpeg",
     category: "lomo",
   },
   {
     id: "lomo-7",
     name: "MAYONESA DE AJO",
-    price: 3000,
+    price: 3500,
     image: "/images/mayonesa-ajo.png",
     category: "lomo",
   },
   {
     id: "lomo-8",
     name: "MAYONESA DE LIMON",
-    price: 3000,
+    price: 3500,
     image: "/images/mayonesa-limon.png",
     category: "lomo",
   },
@@ -88,6 +88,14 @@ export const burgerMenu: MenuItem[] = [
     image: "/images/hamb-supercharger.jpg",
     category: "burger",
     description: "Pan Tipo Napolitano, Dos Medallones de carne de 100gr con un Blend exclusivo, Doble Queso Cheddar de Primera calidad, Tomate Fresco en rodajas, Lechuga Fresca, tres aderezos a elección y pan.",
+    sauceOptions: ["Mayonesa Clásica", "Ketchup", "Mostaza"],
+  },
+  {
+    id: "burger-2",
+    name: "HAMBURPIZZA",
+    price: 28000,
+    image: "/images/hamburpizza.jpg",
+    category: "burger",
     sauceOptions: ["Mayonesa Clásica", "Ketchup", "Mostaza"],
   },
 ]
@@ -145,7 +153,7 @@ export const empanadaMenu: MenuItem[] = [
   {
     id: "empanada-7",
     name: "QUESO ROQUEFORT Docena",
-    price: 15500,
+    price: 16000,
     image: "/images/queso-roquefort.png",
     category: "empanada",
     popular: true,
@@ -162,7 +170,7 @@ export const empanadaMenu: MenuItem[] = [
   {
     id: "empanada-9",
     name: "QUESO ROQUEFORT Unidad",
-    price: 1550,
+    price: 1600,
     image: "/images/queso-roquefort.png",
     category: "empanada",
     priceLabel: "por unidad",
@@ -198,7 +206,7 @@ export const pizzaMenu: MenuItem[] = [
   {
     id: "pizza-1",
     name: "MOZZARELLA",
-    price: 12500,
+    price: 13000,
     image: "/images/mozzarella-pizza.png",
     category: "pizza",
     popular: true,
@@ -227,14 +235,14 @@ export const pizzaMenu: MenuItem[] = [
   {
     id: "pizza-5",
     name: "NAPOLITANA",
-    price: 13000,
+    price: 13500,
     image: "/images/napolitana-pizza.png",
     category: "pizza",
   },
   {
     id: "pizza-6",
     name: "ROQUEFORT",
-    price: 14500,
+    price: 16000,
     image: "/images/roquefort-pizza-new.png",
     category: "pizza",
   },
@@ -250,6 +258,42 @@ export const pizzaMenu: MenuItem[] = [
     name: "ESPECIAL CON JAMON NATURAL Y MORRONES",
     price: 14500,
     image: "/images/morrones-especial.png",
+    category: "pizza",
+  },
+  {
+    id: "burger-2",
+    name: "HAMBURPIZZA",
+    price: 28000,
+    image: "/images/hamburpizza.jpg",
+    category: "burger",
+    sauceOptions: ["Mayonesa Clásica", "Ketchup", "Mostaza"],
+  },
+  {
+    id: "pizza-8",
+    name: "PIZZA DE PALMITOS",
+    price: 19500,
+    image: "/images/pal.jpg",
+    category: "pizza",
+  },
+  {
+    id: "pizza-8",
+    name: "TROPICAL CON ANANA Y CEREZAS",
+    price: 22500,
+    image: "/images/fniu.jpg",
+    category: "pizza",
+  },
+  {
+    id: "pizza-8",
+    name: "ESPECIAL CON HUEVO",
+    price: 16000,
+    image: "/images/pizzaaaaaaaaaaa.jpg",
+    category: "pizza",
+  },
+  {
+    id: "pizza-8",
+    name: "PIZZA PEPERONATA",
+    price: 16500,
+    image: "/images/pepero.jpg",
     category: "pizza",
   },
 ]
