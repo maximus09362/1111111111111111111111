@@ -27,7 +27,7 @@ export const lomoMenu: MenuItem[] = [
     image: "/images/super-duper.png",
     category: "lomo",
     description:
-      "Pan napolitano, carne de ternera, queso, jamón, huevos, tomates, lechuga, mayonesa artesanal saborizada y doble porción de fritas.",
+      "Pan napolitano, carne de ternera, queso, jamón, huevos, tomates, lechuga, mayonesa artesanal saborizada y 100 gramos de fritas".
   },
   {
     id: "lomo-4",
