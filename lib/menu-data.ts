@@ -93,7 +93,7 @@ export const burgerMenu: MenuItem[] = [
   {
     id: "burger-2",
     name: "HAMBURPIZZA",
-    price: 28000,
+    price: 30000,
     image: "/images/hamburpizza.jpg",
     category: "burger",
     sauceOptions: ["Mayonesa Clásica", "Ketchup", "Mostaza"],
@@ -263,7 +263,7 @@ export const pizzaMenu: MenuItem[] = [
   {
     id: "burger-2",
     name: "HAMBURPIZZA",
-    price: 28000,
+    price: 30000,
     image: "/images/hamburpizza.jpg",
     category: "burger",
     sauceOptions: ["Mayonesa Clásica", "Ketchup", "Mostaza"],
